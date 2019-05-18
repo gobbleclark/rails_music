@@ -1,0 +1,24 @@
+<h1 class= "ui header"> Billboards</h1>
+<div class="ui grid"></div>
+<table class="ui striped table">
+  <thead>
+    <tr class="center aligned">
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @billboards.each do |billboard| %>
+      <tr class="center aligned">
+        <td><%= link_to billboard.name, billboard_path(billboard) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br />
+
+<%= link_to "Create a Billboard", new_billboard_path, class: "ui green button" %>
+
+
+
+

@@ -1,0 +1,20 @@
+<h1 class= "ui header"> Artists</h1>
+<div class="ui grid"></div>
+<table class="ui striped table">
+  <thead>
+    <tr class="center aligned">
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @artists.each do |artist| %>
+      <tr class="center aligned">
+        <td><%= link_to artist.name, billboard_artist_path(@billboard, artist) %></td>
+      </tr>                  
+    <% end %>
+  </tbody>
+</table>
+<br />  
+<%= link_to "Add Artist to this Billboard", new_billboard_artist_path(@billboard), class: "ui green button"%>
+<%= link_to "Go Back", billboard_artists_path(@billboard), class: "ui green button"%>``

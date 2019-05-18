@@ -1,0 +1,17 @@
+<div class='ui container'>
+<%= form_with(model: @billboard, local: true, class: "ui form") do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "First Name" %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.text_field :avatar, required: true, placeholder: "Avatar" %>
+  </div>
+
+
+<%= f.submit nil, class: "ui button green" %>
+</div>
+<%= link_to 'Back', billboards_path, class: "ui button space gray" %>
+<% end %>
+</div>

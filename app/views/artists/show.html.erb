@@ -1,0 +1,11 @@
+<div class="ui card">
+  <div class="content">
+    <p class="header">
+      <%= @artist.name %>
+    </p>
+  </div>
+  <div class="extra content">
+    <%= link_to 'Edit Artist', edit_billboard_artist_path(@billboard, @artist), class: "ui button blue" %> |
+    <%= link_to 'Back', billboard_artists_path(@billboard), class: "ui button gray" %>
+  </div>
+</div>
