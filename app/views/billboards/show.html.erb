@@ -5,9 +5,14 @@
     </p>
   </div>
   <div class="extra content">
+      <div class="center aligned">
     <%=  link_to "Artists", billboard_artists_path(@billboard), class: "ui button gray"%> |
     <%= link_to 'Edit', edit_billboard_path(@billboard), class: "ui button blue" %> |
     <%= link_to 'Back', billboards_path, class: "ui button gray" %>
+    <br />
+    <br />
+    <%= link_to 'Delete Billboard', billboard_path(@billboard), class: "ui button red", method: :delete %>
+      </div>
   </div>
 </div>
 
